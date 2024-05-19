@@ -54,12 +54,12 @@ app.get('/api/recipes', async (req, res) => {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'client', 'golden_day', 'build')));
+app.use(express.static(path.join(__dirname, '..', 'GOLDEN DAY', 'client', 'golden_day', 'build')));
 
 // The "catchall" handler: for any request that doesn't match one above,
 // send back the React app's index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'golden_day', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'GOLDEN DAY', 'client', 'golden_day', 'build', 'index.html'));
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
