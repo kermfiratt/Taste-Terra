@@ -14,10 +14,14 @@ mongoose.set('debug', true);
 
 async function connecting() {
   try {
-    await mongoose.connect(process.env.MONGO);
+    await mongoose.connect(process.env.MONGO, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log('Connected to the DB');
   } catch (error) {
-    console.log('ERROR: Seems like your DB is not running, please start it up !!!');
+    console.error('Error connecting to the database: ', error.message);
+    process.exit(1); // Exit process with failure
   }
 }
 connecting();
