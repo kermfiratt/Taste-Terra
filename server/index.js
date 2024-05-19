@@ -1,13 +1,13 @@
 const express = require('express');
 const axios = require('axios');
-const path = require('path'); // Import the path module
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 3040;
 require('dotenv').config();
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-app.use(cors()); // Allow all origins
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.set('debug', true);
@@ -20,11 +20,17 @@ async function connecting() {
     });
     console.log('Connected to the DB');
   } catch (error) {
-    console.error('Error connecting to the database: ', error.message);
-    process.exit(1); // Exit process with failure
+    console.log('ERROR: Seems like your DB is not running, please start it up !!!');
+    console.error('Detailed Error:', error);
   }
 }
+
 connecting();
+
+// Log environment variables for debugging
+console.log('MongoDB Connection String:', process.env.MONGO);
+console.log('Port:', process.env.PORT);
+console.log('Spoonacular API Key:', process.env.SPOONACULAR_API_KEY);
 
 app.use('/users', require('./routes/users.routes'));
 app.use('/api/user/favorites', require('./routes/favorites_routes'));
@@ -42,6 +48,7 @@ app.get('/api/recipes', async (req, res) => {
     });
     res.json(response.data);
   } catch (error) {
+    console.error('Error fetching recipes:', error.message);
     res.status(500).json({ error: error.message });
   }
 });
