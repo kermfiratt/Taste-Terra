@@ -1,13 +1,13 @@
 const express = require('express');
 const axios = require('axios');
-const path = require('path');
+const path = require('path'); // Import the path module
 const app = express();
 const port = process.env.PORT || 3040;
 require('dotenv').config();
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-app.use(cors());
+app.use(cors()); // Allow all origins
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.set('debug', true);
