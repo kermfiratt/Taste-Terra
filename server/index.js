@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const path = require('path'); // Add this line
+const path = require('path'); // Import the path module
 const app = express();
 const port = process.env.PORT || 3040;
 require('dotenv').config();
@@ -8,7 +8,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 app.use(cors()); // Allow all origins
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.set('debug', true);
@@ -46,13 +45,7 @@ app.get('/api/recipes', async (req, res) => {
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-// Define a route for the root URL
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
-
-// The "catchall" handler: for any request that doesn't match one above,
-// send back the React app's index.html file.
+// Catchall route to return the React app's index.html for any non-API routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
 });
