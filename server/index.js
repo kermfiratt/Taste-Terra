@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const path = require('path'); // Add this line
 const app = express();
 const port = process.env.PORT || 3040;
 require('dotenv').config();
@@ -42,8 +43,18 @@ app.get('/api/recipes', async (req, res) => {
   }
 });
 
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
+// Define a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
 
-
+// The "catchall" handler: for any request that doesn't match one above,
+// send back the React app's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+});
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
