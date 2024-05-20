@@ -2,10 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-const app = express();
-const port = process.env.PORT || 3050;
 const cors = require('cors');
 const mongoose = require('mongoose');
+
+const app = express();
+const port = process.env.PORT || 3050;
 
 // CORS configuration
 const corsOptions = {
@@ -33,14 +34,6 @@ async function connecting() {
 
 connecting();
 
-// Log environment variables for debugging
-console.log('MongoDB Connection String:', process.env.MONGO);
-console.log('Port:', process.env.PORT);
-console.log('Spoonacular API Key:', process.env.SPOONACULAR_API_KEY);
-
-app.use('/users', require('./routes/users.routes'));
-app.use('/api/user/favorites', require('./routes/favorites_routes'));
-
 const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 
 app.get('/api/recipes', async (req, res) => {
@@ -58,6 +51,9 @@ app.get('/api/recipes', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
+
+app.use('/users', require('./routes/users.routes'));
+app.use('/api/user/favorites', require('./routes/favorites_routes'));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
