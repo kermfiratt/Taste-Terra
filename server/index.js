@@ -1,4 +1,3 @@
-
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
@@ -8,7 +7,13 @@ require('dotenv').config();
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: 'https://tasteterra-549231ee70ec.herokuapp.com', // replace this with your client URL
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.set('debug', true);
