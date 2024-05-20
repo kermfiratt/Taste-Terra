@@ -1,0 +1,13 @@
+{
+    "name": "golden_day_monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client/golden_day && npm run build --prefix client/golden_day && npm install --prefix server"
+    },
+    "engines": {
+      "node": "16.x",
+      "npm": "8.x"
+    }
+  }
+  
