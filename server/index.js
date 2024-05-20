@@ -22,6 +22,8 @@ mongoose.set('debug', true);
 async function connecting() {
   try {
     await mongoose.connect(process.env.MONGO, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
       ssl: true,
       tlsAllowInvalidCertificates: true
     });
@@ -31,6 +33,9 @@ async function connecting() {
     console.error('Detailed Error:', error);
   }
 }
+
+connecting();
+
 
 
 connecting();
