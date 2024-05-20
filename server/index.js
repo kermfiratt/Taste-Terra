@@ -1,15 +1,15 @@
+require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3040;
-require('dotenv').config();
+const port = process.env.PORT || 3050;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
 // CORS configuration
 const corsOptions = {
-  origin: 'https://tasteterra-549231ee70ec.herokuapp.com', // replace this with your client URL
+  origin: 'https://tasteterra-549231ee70ec.herokuapp.com', // your client URL
   optionsSuccessStatus: 200
 };
 
