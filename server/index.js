@@ -1,26 +1,19 @@
+
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-const cors = require('cors');
-const mongoose = require('mongoose');
-require('dotenv').config();
-
 const app = express();
 const port = process.env.PORT || 3040;
+require('dotenv').config();
+const cors = require('cors');
+const mongoose = require('mongoose');
 
-// Middleware
-app.use(cors({
-  origin: process.env.REACT_APP_API_URL || 'http://localhost:3000', // Ensure the origin is correctly set for development and production
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// MongoDB connection
 mongoose.set('debug', true);
 
-async function connectToDatabase() {
+async function connecting() {
   try {
     await mongoose.connect(process.env.MONGO, {
       useNewUrlParser: true,
@@ -28,19 +21,18 @@ async function connectToDatabase() {
     });
     console.log('Connected to the DB');
   } catch (error) {
-    console.error('ERROR: Seems like your DB is not running, please start it up !!!');
+    console.log('ERROR: Seems like your DB is not running, please start it up !!!');
     console.error('Detailed Error:', error);
   }
 }
 
-connectToDatabase();
+connecting();
 
 // Log environment variables for debugging
 console.log('MongoDB Connection String:', process.env.MONGO);
 console.log('Port:', process.env.PORT);
 console.log('Spoonacular API Key:', process.env.SPOONACULAR_API_KEY);
 
-// Routes
 app.use('/users', require('./routes/users.routes'));
 app.use('/api/user/favorites', require('./routes/favorites_routes'));
 
