@@ -11,10 +11,13 @@ const port = process.env.PORT || 3040;
 // CORS configuration
 const corsOptions = {
   origin: 'https://tasteterra-549231ee70ec.herokuapp.com', // your client URL
-  optionsSuccessStatus: 200
+  optionsSuccessStatus: 200,
 };
 
+// Apply CORS middleware globally
 app.use(cors(corsOptions));
+
+// Parse URL-encoded bodies and JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 mongoose.set('debug', true);
@@ -25,7 +28,7 @@ async function connecting() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       ssl: true,
-      tlsAllowInvalidCertificates: true
+      tlsAllowInvalidCertificates: true,
     });
     console.log('Connected to the DB');
   } catch (error) {
