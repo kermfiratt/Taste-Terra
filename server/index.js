@@ -36,10 +36,6 @@ async function connecting() {
 
 connecting();
 
-
-
-connecting();
-
 const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 
 app.get('/api/recipes', async (req, res) => {
