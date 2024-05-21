@@ -1,5 +1,1 @@
-node_modules
-client/golden_day/node_modules
-*.log
-.env
-build
+

@@ -1,9 +1,9 @@
 {
-    "name": "golden_day_monorepo",
+    "name": "client_monorepo",
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client/golden_day && npm run build --prefix client/golden_day && npm install --prefix server"
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm install --prefix server"
     },
     "engines": {
       "node": "16.x",
