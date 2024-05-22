@@ -9,8 +9,15 @@ const app = express();
 const port = process.env.PORT || 3040;
 
 // CORS configuration
+const allowedOrigins = [process.env.FRONTEND_URL, 'https://your-heroku-app.herokuapp.com'];
 const corsOptions = {
-  origin: process.env.FRONTEND_URL, // dynamically set the frontend URL
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   optionsSuccessStatus: 200,
 };
 
@@ -19,7 +26,7 @@ app.use(cors(corsOptions));
 
 // Additional CORS headers for debugging and ensuring all methods are allowed
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
+  res.header('Access-Control-Allow-Origin', req.header('Origin'));
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') {
