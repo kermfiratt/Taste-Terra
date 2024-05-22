@@ -6,6 +6,8 @@ body {
     background: #f8f9fa;
 }
 
+
+
 .form_and_info {
     display: flex;
     flex-direction: column;
@@ -129,15 +131,46 @@ button:hover {
     margin: 5px 0;
 }
 
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
+    .form_and_info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 20px 0;
+    }
+
     .form_container, .info_section {
         width: 90%;
         padding: 20px;
     }
-    
-    .form_and_info {
-        height: auto;
-        padding: 20px 0;
+
+    label {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .message {
+        font-size: 12px;
+    }
+
+    .info_section p {
+        font-size: 16px;
+    }
+
+    .content__container__list__item {
+        font-size: 20px;
     }
 }
 
@@ -146,40 +179,34 @@ button:hover {
         width: 100%;
         padding: 15px;
     }
-    
+
     label {
-        margin-bottom: 15px;
-        font-size: 16px;
+        margin-bottom: 10px;
+        font-size: 14px;
     }
-    
+
     input {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 14px;
+        padding: 8px;
     }
-    
+
     button {
-        font-size: 16px;
-        padding: 8px 12px;
+        font-size: 14px;
+        padding: 6px 10px;
     }
-    
+
     .message {
-        font-size: 12px;
+        font-size: 10px;
     }
-    
+
     .info_section p {
-        font-size: 16px;
+        font-size: 14px;
     }
-    
+
     .content__container__list__item {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
-
-
-
-
-
-
 
 
 
