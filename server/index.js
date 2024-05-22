@@ -10,12 +10,23 @@ const port = process.env.PORT || 3040;
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000', // use the environment variable or localhost
+  origin: process.env.FRONTEND_URL, // dynamically set the frontend URL
   optionsSuccessStatus: 200,
 };
 
 // Apply CORS middleware globally
 app.use(cors(corsOptions));
+
+// Additional CORS headers for debugging and ensuring all methods are allowed
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL);
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
 // Parse URL-encoded bodies and JSON
 app.use(express.urlencoded({ extended: true }));
