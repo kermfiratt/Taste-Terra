@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3040;
 
 // CORS configuration
-const allowedOrigins = [process.env.FRONTEND_URL, 'https://tasteterra-549231ee70ec.herokuapp.com/'];
+const allowedOrigins = [process.env.FRONTEND_URL, 'https://tasteterra-549231ee70ec.herokuapp.com'];
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
