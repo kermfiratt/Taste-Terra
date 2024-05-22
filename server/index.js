@@ -10,7 +10,7 @@ const port = process.env.PORT || 3040;
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.REACT_APP_API_URL, // your client URL
+  origin: process.env.REACT_APP_API_URL, // use the environment variable
   optionsSuccessStatus: 200,
 };
 
@@ -41,9 +41,6 @@ async function connecting() {
 
 connecting();
 
-
-connecting();
-
 const SPOONACULAR_API_KEY = process.env.SPOONACULAR_API_KEY;
 
 app.get('/api/recipes', async (req, res) => {
@@ -66,17 +63,18 @@ app.use('/users', require('./routes/users.routes'));
 app.use('/api/user/favorites', require('./routes/favorites_routes'));
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-// The "catchall" handler: for any request that doesn't match one above,
-// send back the React app's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-});
+  // The "catchall" handler: for any request that doesn't match one above,
+  // send back the React app's index.html file.
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
+  });
+}
 
 app.get('/test', (req, res) => {
   res.json({ message: 'Server is working' });
 });
-
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
