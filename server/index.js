@@ -10,7 +10,7 @@ const port = process.env.PORT || 3040;
 
 // CORS configuration
 const corsOptions = {
-  origin: process.env.REACT_APP_API_URL, // use the environment variable
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000', // use the environment variable or localhost
   optionsSuccessStatus: 200,
 };
 
