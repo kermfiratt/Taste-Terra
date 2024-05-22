@@ -36,6 +36,8 @@ function App() {
         } else {
           axios.defaults.headers.common["Authorization"] = token;
           const response = await axios.post(`${URL}/users/verify_token`);
+          console.log('Token verification response:', response.data); // Add log here
+
           if (response.data.ok) {
             const decoded = response.data.decoded;
             login(token, decoded.userId); // Pass userId to login function
@@ -46,6 +48,7 @@ function App() {
         }
       } catch (error) {
         console.log(error);
+        
       }
     };
     verifyToken();

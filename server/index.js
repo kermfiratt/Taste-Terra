@@ -10,7 +10,7 @@ const port = process.env.PORT || 3040;
 
 // CORS configuration
 const corsOptions = {
-  origin: 'https://tasteterra-549231ee70ec.herokuapp.com', // your client URL
+  origin: 'http://localhost:3000', // your client URL
   optionsSuccessStatus: 200,
 };
 
@@ -29,6 +29,8 @@ async function connecting() {
       useUnifiedTopology: true,
       ssl: true,
       tlsAllowInvalidCertificates: true,
+      connectTimeoutMS: 30000, // Increase timeout to 30 seconds
+      serverSelectionTimeoutMS: 30000, // Increase server selection timeout to 30 seconds
     });
     console.log('Connected to the DB');
   } catch (error) {
@@ -36,6 +38,9 @@ async function connecting() {
     console.error('Detailed Error:', error);
   }
 }
+
+connecting();
+
 
 connecting();
 
