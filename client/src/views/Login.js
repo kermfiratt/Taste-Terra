@@ -49,8 +49,19 @@ const Login = (props) => {
   };
 
   return (
+
+
+
+
+
+    
     <div className="form_and_info special">
+
+
+
+
       <form onSubmit={handleSubmit} onChange={handleChange} className="form_container">
+      <h1 className="typewriter">Taste Terra</h1>
         <label>Email</label>
         <input name="email" placeholder="email" />
 
