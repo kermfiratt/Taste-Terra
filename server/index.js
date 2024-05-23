@@ -8,8 +8,6 @@ const mongoose = require('mongoose');
 const app = express();
 const port = process.env.PORT || 3040;
 
-// CORS configuration
-const allowedOrigins = [process.env.FRONTEND_URL, 'https://tasteterra-549231ee70ec.herokuapp.com'];
 const corsOptions = {
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.indexOf(origin) !== -1) {
@@ -19,16 +17,16 @@ const corsOptions = {
     }
   },
   optionsSuccessStatus: 200,
+  credentials: true, // Add this line to support credentials in requests
 };
 
-// Apply CORS middleware globally
 app.use(cors(corsOptions));
 
-// Additional CORS headers for debugging and ensuring all methods are allowed
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', req.header('Origin'));
+  res.header('Access-Control-Allow-Origin', req.header('Origin') || '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true'); // Add this line to support credentials in requests
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
