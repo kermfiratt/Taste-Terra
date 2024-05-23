@@ -897,7 +897,13 @@ button:hover {
 
 
 
+@media (max-width: 768px) {
+    .turkish_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
 
+}
 
 
 .box_for_manti_image {
@@ -946,6 +952,14 @@ button:hover {
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .turkish_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 .box_for_sarma_image {
@@ -992,6 +1006,15 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .turkish_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -1234,6 +1257,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .italian_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -1291,6 +1322,15 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .italian_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
 
 
 
@@ -1345,6 +1385,15 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .italian_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -1409,6 +1458,15 @@ footer{
 }
 
 
+@media (max-width: 768px) {
+    .chinese_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
 
 
 
@@ -1465,6 +1523,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .chinese_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -1519,6 +1585,14 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+@media (max-width: 768px) {
+    .chinese_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -1598,6 +1672,14 @@ footer{
 }
 
 
+@media (max-width: 768px) {
+    .mexican_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -1654,6 +1736,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .mexican_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -1708,6 +1798,14 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+@media (max-width: 768px) {
+    .mexican_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -1778,6 +1876,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .american_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -1835,6 +1941,15 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .american_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
 
 
 
@@ -1889,6 +2004,15 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .american_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -1966,6 +2090,15 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .french_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
 
 
 
@@ -2023,6 +2156,15 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .french_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
 
 
 
@@ -2077,6 +2219,15 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .french_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -2152,6 +2303,16 @@ footer{
 }
 
 
+@media (max-width: 768px) {
+    .indian_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
+
+
 
 
 
@@ -2208,6 +2369,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .indian_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -2262,6 +2431,14 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+@media (max-width: 768px) {
+    .indian_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -2341,6 +2518,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .brazilian_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -2396,6 +2581,14 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+@media (max-width: 768px) {
+    .brazilian_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
@@ -2454,6 +2647,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+
+@media (max-width: 768px) {
+    .brazilian_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
 
 
 
@@ -2529,6 +2730,14 @@ footer{
     grid-template-rows: auto; 
 }
 
+@media (max-width: 768px) {
+    .greek_foods_first {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -2587,6 +2796,14 @@ footer{
 }
 
 
+@media (max-width: 768px) {
+    .greek_foods_second {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
+}
+
 
 
 
@@ -2640,6 +2857,14 @@ footer{
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* creates three columns */
     grid-template-rows: auto; 
+}
+
+@media (max-width: 768px) {
+    .greek_foods_third {
+        grid-template-columns: 1fr; /* Changes to a single column */
+        padding: 0 5%; /* Optional: Adjust padding for better appearance */
+    }
+
 }
 
 
