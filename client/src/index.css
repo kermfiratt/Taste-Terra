@@ -279,7 +279,23 @@ button:hover {
     font-family: 'Roboto', sans-serif; /* Applying Roboto Font */
     background-image: url('images/turkish_flag.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     
+}
+
+
+@media (max-width: 768px) {
+    .turkish {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-top: 20%;
+        padding-right: 0%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
 }
 
 .turkish:hover {
@@ -320,6 +336,20 @@ button:hover {
     
 }
 
+@media (max-width: 768px) {
+    .italian {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-right: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
+}
+
 .italian:hover {
     transform: scale(1.05); /* Slightly scale up on hover for a dynamic effect */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.25); /* Deeper shadow on hover */
@@ -355,6 +385,19 @@ button:hover {
     background-image: url('images/french_flag.jpg');
     background-size: cover;
     
+}
+
+@media (max-width: 768px) {
+    .french {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
 }
 
 .french:hover {
@@ -434,6 +477,19 @@ button:hover {
     
 }
 
+@media (max-width: 768px) {
+    .chinese {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
+}
+
 .chinese:hover {
     transform: scale(1.05); /* Slightly scale up on hover for a dynamic effect */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.25); /* Deeper shadow on hover */
@@ -469,6 +525,21 @@ button:hover {
     background-image: url('images/american_flag.jpg');
     background-size: cover;
     
+}
+
+
+@media (max-width: 768px) {
+    .american {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-right: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
 }
 
 .american:hover {
@@ -510,6 +581,20 @@ button:hover {
     
 }
 
+@media (max-width: 768px) {
+    .mexican {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-right: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
+}
+
 .mexican:hover {
     transform: scale(1.05); /* Slightly scale up on hover for a dynamic effect */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.25); /* Deeper shadow on hover */
@@ -548,6 +633,21 @@ button:hover {
     background-image: url('images/indian_flag.jpg');
     background-size: cover;
     
+}
+
+
+@media (max-width: 768px) {
+    .indian {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-right: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
 }
 
 .indian:hover {
@@ -592,6 +692,21 @@ button:hover {
     
 }
 
+
+@media (max-width: 768px) {
+    .brazilian {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-right: 0%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
+}
+
 .brazilian:hover {
     transform: scale(1.05); /* Slightly scale up on hover for a dynamic effect */
     box-shadow: 0 8px 16px rgba(0,0,0,0.1), 0 12px 40px rgba(0,0,0,0.25); /* Deeper shadow on hover */
@@ -631,6 +746,19 @@ button:hover {
     background-image: url('images/greek_flag.jpg');
     background-size: cover;
     
+}
+
+@media (max-width: 768px) {
+    .greek {
+        width: 90%;
+        height: 8vh; /* Adjust height to auto for better fit */
+        padding: 5%;
+        padding-top: 20%;
+        margin-right: 5%;
+        margin-left: 5%;
+        background-size: cover; /* Ensure the image is contained within the element */
+        background-position: center; /* Center the background image */
+    }
 }
 
 .greek:hover {
