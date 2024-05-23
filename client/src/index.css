@@ -2863,6 +2863,7 @@ footer{
     .greek_foods_third {
         grid-template-columns: 1fr; /* Changes to a single column */
         padding: 0 5%; /* Optional: Adjust padding for better appearance */
+        
     }
 
 }
