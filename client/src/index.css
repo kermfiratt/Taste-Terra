@@ -137,6 +137,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         height: 100vh;
+        padding: 20px;
     }
 
     .form_container {
@@ -145,6 +146,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         height: 100vh;
+        padding: 20px;
     }
 
     .info_section {
@@ -153,7 +155,9 @@ button:hover {
 
     .form_container, .info_section {
         width: 90%;
+        max-width: 500px;
         padding: 20px;
+        box-sizing: border-box;
     }
 
     label {
@@ -232,7 +236,6 @@ button:hover {
         justify-content: center;
     }
 }
-
 
 
 
