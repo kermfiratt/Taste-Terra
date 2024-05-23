@@ -50,9 +50,7 @@ const SecretPage = (props) => {
     <div className="special">
       <header className="header_style">
         <div className="navigator">
-          <div>
-            <h5>{props.user ? props.user.email : "Guest"}</h5>
-          </div>
+         
 
           <div>
             <NavLink to={'/secret-page'} style={({ isActive }) => (
