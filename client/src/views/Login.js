@@ -61,7 +61,7 @@ const Login = (props) => {
 
 
       <form onSubmit={handleSubmit} onChange={handleChange} className="form_container">
-      <h1 className="typewriter">Taste Terra</h1>
+      <h1 className="typewriter"> Welcome to Taste Terra</h1>
         <label>Email</label>
         <input name="email" placeholder="email" />
 
